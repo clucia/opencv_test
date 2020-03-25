@@ -1,18 +1,5 @@
-pi@pi4:~$ cd opencv
-pi@pi4:~/opencv$ ls
-3rdparty  apps	cmake  CMakeLists.txt  CONTRIBUTING.md	data  doc  include  LICENSE  modules  platforms  README.md  samples
-pi@pi4:~/opencv$ mkdir build
-pi@pi4:~/opencv$ cd build
-pi@pi4:~/opencv/build$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
->     -D CMAKE_INSTALL_PREFIX=/usr/local \
->     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
->     -D ENABLE_NEON=ON \
->     -D ENABLE_VFPV3=ON \
->     -D BUILD_TESTS=OFF \
->     -D INSTALL_PYTHON_EXAMPLES=OFF \
->     -D OPENCV_ENABLE_NONFREE=ON \
->     -D CMAKE_SHARED_LINKER_FLAGS=-latomic \
->     -D BUILD_EXAMPLES=OFF ..
+(cv) pi@pi4:~/opencv/build$ !226
+cmake -D CMAKE_BUILD_TYPE=RELEASE     -D CMAKE_INSTALL_PREFIX=/usr/local     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules     -D ENABLE_NEON=ON     -D ENABLE_VFPV3=ON     -D BUILD_TESTS=OFF     -D INSTALL_PYTHON_EXAMPLES=OFF     -D OPENCV_ENABLE_NONFREE=ON     -D CMAKE_SHARED_LINKER_FLAGS=-latomic     -D BUILD_EXAMPLES=OFF ..
 -- The CXX compiler identification is GNU 8.3.0
 -- The C compiler identification is GNU 8.3.0
 -- Check for working CXX compiler: /usr/bin/c++
@@ -31,8 +18,51 @@ pi@pi4:~/opencv/build$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -- sizeof(void) = 4 on 64 bit processor. Assume 32-bit compilation mode
 -- Found PythonInterp: /usr/bin/python2.7 (found suitable version "2.7.16", minimum required is "2.7") 
 -- Found PythonLibs: /usr/lib/arm-linux-gnueabihf/libpython2.7.so (found suitable exact version "2.7.16") 
--- Found PythonInterp: /usr/bin/python3 (found suitable version "3.7.3", minimum required is "3.2") 
+-- Found PythonInterp: /home/pi/.virtualenvs/cv/bin/python3 (found suitable version "3.7.3", minimum required is "3.2") 
 -- Found PythonLibs: /usr/lib/arm-linux-gnueabihf/libpython3.7m.so (found suitable exact version "3.7.3") 
+Traceback (most recent call last):
+  File "/home/pi/.virtualenvs/cv/lib/python3.7/site-packages/numpy/core/__init__.py", line 24, in <module>
+    from . import multiarray
+  File "/home/pi/.virtualenvs/cv/lib/python3.7/site-packages/numpy/core/multiarray.py", line 14, in <module>
+    from . import overrides
+  File "/home/pi/.virtualenvs/cv/lib/python3.7/site-packages/numpy/core/overrides.py", line 7, in <module>
+    from numpy.core._multiarray_umath import (
+ImportError: libf77blas.so.3: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/pi/.virtualenvs/cv/lib/python3.7/site-packages/numpy/__init__.py", line 142, in <module>
+    from . import core
+  File "/home/pi/.virtualenvs/cv/lib/python3.7/site-packages/numpy/core/__init__.py", line 54, in <module>
+    raise ImportError(msg)
+ImportError: 
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy c-extensions failed.
+- Try uninstalling and reinstalling numpy.
+- If you have already done that, then:
+  1. Check that you expected to use Python3.7 from "/home/pi/.virtualenvs/cv/bin/python3",
+     and that you have no directories in your PATH or PYTHONPATH that can
+     interfere with the Python and numpy version "1.18.2" you're trying to use.
+  2. If (1) looks fine, you can open a new issue at
+     https://github.com/numpy/numpy/issues.  Please include details on:
+     - how you installed Python
+     - how you installed numpy
+     - your operating system
+     - whether or not you have multiple versions of Python installed
+     - if you built from source, your compiler versions and ideally a build log
+
+- If you're working with a numpy git repository, try `git clean -xdf`
+  (removes all files not under version control) and rebuild numpy.
+
+Note: this error has many possible causes, so please don't comment on
+an existing issue about this - open a new one instead.
+
+Original error was: libf77blas.so.3: cannot open shared object file: No such file or directory
+
 -- Looking for ccache - not found
 -- Performing Test HAVE_CXX_FSIGNED_CHAR
 -- Performing Test HAVE_CXX_FSIGNED_CHAR - Success
@@ -382,7 +412,7 @@ pi@pi4:~/opencv/build$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 --     Version control (extra):     unknown
 -- 
 --   Platform:
---     Timestamp:                   2020-03-25T22:10:11Z
+--     Timestamp:                   2020-03-25T22:19:53Z
 --     Host:                        Linux 4.19.97-v7l+ armv7l
 --     CMake:                       3.13.4
 --     CMake generator:             Unix Makefiles
@@ -410,10 +440,10 @@ pi@pi4:~/opencv/build$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 --     3rdparty dependencies:
 -- 
 --   OpenCV modules:
---     To be built:                 aruco bgsegm bioinspired calib3d ccalib core datasets dnn dnn_objdetect dpm face features2d flann freetype fuzzy gapi hdf hfs highgui img_hash imgcodecs imgproc line_descriptor ml objdetect optflow phase_unwrapping photo plot python2 python3 quality reg rgbd saliency shape stereo stitching structured_light superres surface_matching text tracking ts video videoio videostab xfeatures2d ximgproc xobjdetect xphoto
+--     To be built:                 aruco bgsegm bioinspired calib3d ccalib core datasets dnn dnn_objdetect dpm face features2d flann freetype fuzzy gapi hdf hfs highgui img_hash imgcodecs imgproc line_descriptor ml objdetect optflow phase_unwrapping photo plot python2 quality reg rgbd saliency shape stereo stitching structured_light superres surface_matching text tracking ts video videoio videostab xfeatures2d ximgproc xobjdetect xphoto
 --     Disabled:                    world
 --     Disabled by dependency:      -
---     Unavailable:                 cnn_3dobj cudaarithm cudabgsegm cudacodec cudafeatures2d cudafilters cudaimgproc cudalegacy cudaobjdetect cudaoptflow cudastereo cudawarping cudev cvv java js matlab ovis sfm viz
+--     Unavailable:                 cnn_3dobj cudaarithm cudabgsegm cudacodec cudafeatures2d cudafilters cudaimgproc cudalegacy cudaobjdetect cudaoptflow cudastereo cudawarping cudev cvv java js matlab ovis python3 sfm viz
 --     Applications:                perf_tests apps
 --     Documentation:               NO
 --     Non-free algorithms:         YES
@@ -468,12 +498,6 @@ pi@pi4:~/opencv/build$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 --     numpy:                       /usr/lib/python2.7/dist-packages/numpy/core/include (ver 1.16.2)
 --     install path:                lib/python2.7/dist-packages/cv2/python-2.7
 -- 
---   Python 3:
---     Interpreter:                 /usr/bin/python3 (ver 3.7.3)
---     Libraries:                   /usr/lib/arm-linux-gnueabihf/libpython3.7m.so (ver 3.7.3)
---     numpy:                       /usr/lib/python3/dist-packages/numpy/core/include (ver 1.16.2)
---     install path:                lib/python3.7/dist-packages/cv2/python-3.7
--- 
 --   Python (for build):            /usr/bin/python2.7
 -- 
 --   Java:                          
@@ -488,4 +512,4 @@ pi@pi4:~/opencv/build$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/pi/opencv/build
-pi@pi4:~/opencv/build$ 
+(cv) pi@pi4:~/opencv/build$ 
