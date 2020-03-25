@@ -1,0 +1,228 @@
+    1  ip addr show
+    2  exit
+    3  ls -la
+    4  mkdir .ssh
+    5  chmod 700 .ssh
+    6  exit
+    7  cd oled
+    8  ls
+    9  apt list
+   10  apt list | grep -i 7z
+   11  sudo apt install p7zip
+   12  y
+   13  ls
+   14  p7zip -d 1.5inch_RGB_OLED_Module_Code.7z 
+   15  ls -tlr
+   16  cd RaspberryPi/
+   17  ls
+   18  cd c
+   19  ls
+   20  make
+   21  cd obj/DEV_Config.
+   22  cd obj/DEV_Config.h
+   23  cd obj/DEV_Config.h 
+   24  vi obj/DEV_Config.h 
+   25  vi Makefile
+   26  make
+   27  vi Makefile
+   28  make
+   29  vi Makefile
+   30  make
+   31  vi Makefile
+   32  make
+   33  vi Makefile
+   34  cd /usr/include
+   35  ls
+   36  find | grep bcm
+   37  cd ..
+   38  find | grep bcm
+   39  sudo poweroff
+   40  poweroff 
+   41  cd oled/RaspberryPi/
+   42  ls
+   43  cd c
+   44  ls
+   45  make
+   46  vi Makefile
+   47  make clean
+   48  make
+   49  cd
+   50  ls
+   51  cd Downloads/
+   52  ls
+   53  mv *.gz ../oled
+   54  cd ../oled/
+   55  ls
+   56  gunzip WiringPi.tar.gz 
+   57  gunzip Bcm2835-1.39.tar.gz 
+   58  tar xvf Bcm2835-1.39.tar 
+   59  tar xvf WiringPi.tar 
+   60  ls
+   61  cd Bcm2835-1.39.tar 
+   62  ls
+   63  cd bcm2835-1.39/
+   64  ls
+   65  sh configure
+   66  ls
+   67  maek
+   68  make
+   69  make install
+   70  sudo make install
+   71  cd ../WiringPi.tar 
+   72  cd ../wiringPi/
+   73  ls
+   74  cd ..
+   75  ls
+   76  ls ..
+   77  cd wiringPi/
+   78  ls
+   79  chmod 777 build
+   80  ./build
+   81  gpio -v
+   82  sudo apt-get update
+   83  sudo apt-get install python-dev
+   84  sudo python setup.py install
+   85  pip install RPi.GPIO
+   86  pip install python-smbus
+   87  sudo pip install python-smbus
+   88  sudo apt-get install python-smbus
+   89  sudo apt-get install python-serial
+   90  sudo pip install spidev
+   91  sudo apt-get install python-imaging
+   92  ls
+   93  cd ..
+   94  ls
+   95  cd Raspberry
+   96  cd RaspberryPi/
+   97  ls
+   98  cd python/
+   99  ls
+  100  sudo python main.py 
+  101  cd ..
+  102  cd ..
+  103  cd ..
+  104  mv oled oled_test
+  105  tar cvf oled_test.tar oled_test/
+  106  cd oled_test
+  107  git init
+  108  git remote add origin git@github.com:clucia/oled_test.git
+  109  git push -u origin master
+  110  git push -u origin master -f
+  111  ls -tlr
+  112  ls -la
+  113  rm -rf .git
+  114  cd ..
+  115  git clone git@github.com:clucia/oled_test.git
+  116  cd ..
+  117  cd
+  118  pwd
+  119  mv oled_test oled
+  120  git clone git@github.com:clucia/oled_test.git
+  121  cd oled
+  122  ls
+  123  mv * ../oled_test
+  124  cd ../oled_test
+  125  ls
+  126  find . -name .git -prune -o -type f -print
+  127  find . -name .git -prune -o -type f -print | git add
+  128  find . -name .git -prune -o -type f -print | xargs git add
+  129  git commit -am "python version works"
+  130  find . -name .git -prune -o -type f -print0 | xargs -0 git add
+  131  git status
+  132  git commit -am "python version works"
+  133  git push origin master
+  134  cd Raspberry/c
+  135  ls
+  136  cd RaspberryPi/
+  137  cd c
+  138  ls
+  139  make
+  140  ./main
+  141  sudo ./main
+  142  ls
+  143  cat Makefile 
+  144  ls
+  145  find
+  146  make clean
+  147  make
+  148  ls  -ltr
+  149  ./main
+  150  sudo ./main
+  151  find . -type f | xargs grep BCM2708
+  152  find . -type f | xargs grep 2708
+  153  vi Makefile
+  154  make clean
+  155  make
+  156  sudo ./main 
+  157  sudo reboot
+  158  cd oled_test/RaspberryPi/c
+  159  ls
+  160  ./main
+  161  sudo ./main
+  162  sudo poweroff
+  163  cd oled_test/RaspberryPi/c
+  164  ls
+  165  ./main
+  166  sudo ./main
+  167  cd ../python/
+  168  ls
+  169  sudo python main.py
+  170  sudo reboot
+  171  cd oled_test/RaspberryPi/python/
+  172  ls
+  173  sudo python main.py 
+  174  cd ..
+  175  cd c
+  176  ls
+  177  ./main
+  178  sudo ./main
+  179  cd ../python/
+  180  ls
+  181  sudo python main.py 
+  182  sudo python main.py 
+  183  sudo reboot
+  184  cd oled_test/RaspberryPi/c/
+  185  ./main
+  186  sudo ./main
+  187  cd ../python/
+  188  sudo python main.py 
+  189  reboot
+  190  cd oled_test/RaspberryPi/python/
+  191  sudo python main.py 
+  192  sudo poweroff
+  193  git clone git@github.com:clucia/opencv_test.git
+  194  uname -a
+  195  sudo apt-get update && sudo apt-get upgrade
+  196  sudo apt-get install build-essential cmake pkg-config
+  197  sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng-dev
+  198  sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libfontconfig1-dev libcairo2-dev libgdk-pixbuf2.0-dev libpango1.0-dev libgtk2.0-dev libgtk-3-dev
+  199  sudo apt-get install libhdf5-dev libhdf5-serial-dev libhdf5-103 libqtgui4 libqtwebkit4 libqt4-test python3-pyqt5 python3-dev
+  200  cd opencv_test/
+  201  wget https://bootstrap.pypa.io/get-pip.py
+  202  sudo python get-pip.py
+  203  sudo python3 get-pip.py
+  204  sudo rm -rf ~/.cache/pip
+  205  sudo pip install virtualenv virtualenvwrapper
+  206  nano ~/.bashrc
+  207  source ~/.bashrc
+  208  mkvirtualenv cv -p python3
+  209  pip install "picamera[array]"
+  210  cd
+  211  wget -O opencv.zip https://github.com/opencv/opencv/archive/4.1.1.zip
+  212  wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.1.1.zip
+  213  unzip opencv.zip
+  214  unzip opencv_contrib.zip
+  215  mv opencv-4.1.1 opencv
+  216  mv opencv_contrib-4.1.1 opencv_contrib
+  217  sudo vim /etc/dphys-swapfile 
+  218  sudo /etc/init.d/dphys-swapfile stop
+  219  sudo /etc/init.d/dphys-swapfile start
+  220  workon cv
+  221  pip install numpy
+  222  cd opencv
+  223  ls
+  224  mkdir build
+  225  cd build
+  226  cmake -D CMAKE_BUILD_TYPE=RELEASE     -D CMAKE_INSTALL_PREFIX=/usr/local     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules     -D ENABLE_NEON=ON     -D ENABLE_VFPV3=ON     -D BUILD_TESTS=OFF     -D INSTALL_PYTHON_EXAMPLES=OFF     -D OPENCV_ENABLE_NONFREE=ON     -D CMAKE_SHARED_LINKER_FLAGS=-latomic     -D BUILD_EXAMPLES=OFF ..
+  227  history
+pi@pi4:~/opencv/build$ 
