@@ -3,7 +3,8 @@ sudo python get-pip.py
 sudo python3 get-pip.py
 sudo rm -rf ~/.cache/pip
 
-sudo pip install virtualenv virtualenvwrapper
+sudo pip3 install 'virtualenv==20.0.3'
+sudo pip3 install 'virtualenvwrapper=4.8.4'
 
 # virtualenv and virtualenvwrapper
 echo 'export WORKON_HOME=$HOME/.virtualenvs' >> ~/.bashrc
@@ -14,7 +15,7 @@ echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
 . ~/.bashrc
 
-echo Don't forget to '. ~/.bashrc' when this script exits
+echo Do not forget to '. ~/.bashrc' when this script exits
 
 mkvirtualenv cv -p python3
 pip install "picamera[array]"
