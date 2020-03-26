@@ -1,0 +1,19 @@
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+sudo python3 get-pip.py
+sudo rm -rf ~/.cache/pip
+
+sudo pip install virtualenv virtualenvwrapper
+
+# virtualenv and virtualenvwrapper
+echo 'export WORKON_HOME=$HOME/.virtualenvs' >> ~/.bashrc
+echo 'export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3' >> ~/.bashrc
+echo 'export VIRTUALENVWRAPPER_ENV_BIN_DIR=bin' >> ~/.bashrc
+echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+
+. ~/.bashrc
+
+echo Don't forget to '. ~/.bashrc' when this script exits
+
+mkvirtualenv cv -p python3
+pip install "picamera[array]"
