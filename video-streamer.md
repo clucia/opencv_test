@@ -18,11 +18,13 @@ git clone git@github.com:jacksonliam/mjpg-streamer.git
 
 from mpeg-streamer instructions:
 
-sudo apt-get install cmake libjpeg8-dev # did nothing
+sudo apt-get install cmake libjpeg8-dev
 
 sudo apt-get install gcc g++
 
 cd mjpg-streamer/mjpg-streamer-experimental
 
 make
+# Doesn't build with opencv 4
+
 
